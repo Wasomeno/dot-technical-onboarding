@@ -1,0 +1,82 @@
+.carousel__item {
+  overflow: hidden;
+  position: relative;
+  height: 10rem;
+  border-radius: 12px;
+  background-color: black;
+}
+
+.carousel__item__info-section {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  max-width: 40%;
+}
+
+.carousel__item__info-section .ant-tag {
+  font-size: 6px !important;
+}
+
+.carousel__item__title {
+  margin: 0 !important;
+  font-size: 12px !important;
+  color: white !important;
+}
+
+.carousel__item__description {
+  margin: 0 !important;
+  font-size: 8px !important;
+  color: white !important;
+}
+
+.carousel__item__skeleton {
+  position: relative;
+  height: 10rem !important;
+  border-radius: 12px;
+  background-color: gray;
+  width: 100% !important;
+}
+
+@media (min-width: 576px) {
+  .carousel__item {
+    height: 12rem;
+  }
+  .carousel__item__skeleton {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel__item {
+    height: 28rem;
+  }
+  .carousel__item__skeleton {
+    height: 28rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .carousel__item {
+    height: 32rem;
+  }
+
+  .carousel__item__skeleton {
+    height: 32rem;
+  }
+  .carousel__item__info-section {
+    bottom: 100px;
+    left: 40px;
+    max-width: 30%;
+  }
+
+  .carousel__item__info-section .ant-tag {
+    font-size: 12px !important;
+  }
+
+  .carousel__item__title {
+    font-size: 36px !important;
+  }
+  .carousel__item__description {
+    font-size: 16px !important;
+  }
+}

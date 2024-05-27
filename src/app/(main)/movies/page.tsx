@@ -1,11 +1,7 @@
-import { HeroSection } from "@/components/home/hero-section";
 import { MoviesSection } from "@/components/movies-section";
+import React from "react";
 
-type HomeProps = {
-  searchParams: { movieId: string };
-};
-
-export default async function Home(props: HomeProps) {
+const MoviesPage = () => {
   return (
     <main
       style={{
@@ -16,10 +12,13 @@ export default async function Home(props: HomeProps) {
         gap: "2rem",
       }}
     >
-      <HeroSection />
       <MoviesSection title="Action Movies" genreName="action" />
       <MoviesSection title="Animation Movies" genreName="animation" />
       <MoviesSection title="Drama Movies" genreName="drama" />
+      <MoviesSection title="Comedy Movies" genreName="comedy" />
+      <MoviesSection title="Horror Movies" genreName="horror" />
     </main>
   );
-}
+};
+
+export default MoviesPage;

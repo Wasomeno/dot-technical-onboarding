@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react";
 
 const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <body
+    <main
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -12,7 +12,7 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
       }}
     >
       {children}
-    </body>
+    </main>
   );
 };
 

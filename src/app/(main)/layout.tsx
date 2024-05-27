@@ -1,9 +1,13 @@
 import { MainNavigation } from "@/components/main-navigation";
+import { MobileNavigation } from "@/components/mobile-navigation";
+import { MoviePreviewModal } from "@/components/movie-preview-modal";
+import { SearchPageWrapper } from "@/components/search-page-wrapper";
+import { TVShowPreviewModal } from "@/components/tv-show-preview-modal";
 import React, { PropsWithChildren } from "react";
 
-const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
+export default async function MainLayout({ children }: PropsWithChildren) {
   return (
-    <body
+    <main
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -13,9 +17,10 @@ const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
       }}
     >
       <MainNavigation />
-      {children}
-    </body>
+      <SearchPageWrapper>{children}</SearchPageWrapper>
+      <MoviePreviewModal />
+      <TVShowPreviewModal />
+      <MobileNavigation />
+    </main>
   );
-};
-
-export default MainLayout;
+}

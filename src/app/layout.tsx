@@ -1,5 +1,9 @@
 import { ReactQueryProvider } from "@/components/react-query-provider";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 import "./globals.css";
 
@@ -14,10 +18,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <ReactQueryProvider>
-        <AntdRegistry>{children} </AntdRegistry>
-      </ReactQueryProvider>
-    </html>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
+      <html lang="en">
+        <body>
+          <AntdRegistry>
+            <ReactQueryProvider>
+              {children}
+
+              <ReactQueryDevtools initialIsOpen={false} />
+            </ReactQueryProvider>
+          </AntdRegistry>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

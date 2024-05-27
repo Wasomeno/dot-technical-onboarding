@@ -1,0 +1,23 @@
+.mobile-navigation {
+  display: flex !important;
+  padding: 0.5rem;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  border-top: 1px solid #e50914;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 1200px) {
+  .mobile-navigation {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mobile-navigation {
+    display: none !important;
+  }
+}

@@ -1,0 +1,57 @@
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #e50914;
+  font-size: 16px;
+}
+
+.logo__medium {
+  font-size: 16px;
+}
+
+.logo__small {
+  font-size: 16px;
+}
+.logo__large {
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .logo__medium {
+    font-size: 16px;
+  }
+
+  .logo__small {
+    font-size: 16px;
+  }
+  .logo__large {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo__medium {
+    font-size: 20px;
+  }
+
+  .logo__small {
+    font-size: 18px;
+  }
+  .logo__large {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logo__medium {
+    font-size: 24px;
+  }
+
+  .logo__small {
+    font-size: 20px;
+  }
+
+  .logo__large {
+    font-size: 28px;
+  }
+}

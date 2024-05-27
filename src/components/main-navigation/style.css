@@ -1,0 +1,28 @@
+.main-navigation {
+  display: flex;
+  width: 100vw;
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: black;
+  padding-inline: 1rem;
+}
+
+.main-navigation__left-section.ant-col {
+  display: none;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 1200px) {
+  .main-navigation__left-section.ant-col {
+    display: flex;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-navigation__left-section.ant-col {
+    display: flex;
+  }
+}
