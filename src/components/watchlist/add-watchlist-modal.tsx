@@ -114,7 +114,7 @@ export const AddWatchlistModal = () => {
         }: FormikProps<AddWatchlistFormData>) => (
           <Form labelCol={{ span: 24 }} onFinish={handleSubmit}>
             <FieldArray name="inputFields">
-              {({ push, remove }) => (
+              {({ push }) => (
                 <Space style={{ width: "100%" }} direction="vertical">
                   <Flex justify="end">
                     <Button size="middle" onClick={() => push({ name: "" })}>
@@ -123,6 +123,7 @@ export const AddWatchlistModal = () => {
                   </Flex>
                   {values.inputFields.map((field, index) => (
                     <FormItem
+                      key={index}
                       label="Name"
                       validateStatus={
                         errors.inputFields &&

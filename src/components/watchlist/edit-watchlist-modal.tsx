@@ -131,6 +131,7 @@ export const EditWatchlistModal = () => {
                   <Space style={{ width: "100%" }} direction="vertical">
                     {values.inputFields.map((field, index) => (
                       <FormItem
+                        key={index}
                         label="Name"
                         validateStatus={
                           errors.inputFields &&

@@ -5,7 +5,7 @@ type HomeProps = {
   searchParams: { movieId: string };
 };
 
-export default async function Home(props: HomeProps) {
+export default async function Home() {
   return (
     <main
       style={{
