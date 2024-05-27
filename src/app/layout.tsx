@@ -1,5 +1,7 @@
-import { queryClient } from "@/lib/react-query";
+import { ReactQueryProvider } from "@/components/react-query-provider";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+
+import "./globals.css";
 
 export const metadata = {
   title: "Next.js",
@@ -13,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ minHeight: "100vh", display: "flex", flex: "1 1 0%" }}>
+      <ReactQueryProvider>
         <AntdRegistry>{children} </AntdRegistry>
-      </body>
+      </ReactQueryProvider>
     </html>
   );
 }
